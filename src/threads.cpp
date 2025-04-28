@@ -100,7 +100,7 @@ int main() {
     std::cout << "time for 5 threads: " << timin.count() << "\n";
 
     auto starting2 = std::chrono::high_resolution_clock::now();
-    auto bluring2 = parallellBlurThreads(large_image, 5);
+    auto bluring2 = parallellBlurThreads(large_image, 10);
     auto ending2 = std::chrono::high_resolution_clock::now();
     std::chrono::duration <double> timin2 = ending2 - starting2;
     std::cout << "time for 10 threads: " << timin2.count() << "\n";
