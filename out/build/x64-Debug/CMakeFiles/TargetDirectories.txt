@@ -1,5 +1,6 @@
 C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/CMakeFiles/edit_cache.dir
 C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
 C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/src/CMakeFiles/seqblur.dir
+C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/src/CMakeFiles/threads.dir
 C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/src/CMakeFiles/edit_cache.dir
 C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/src/CMakeFiles/rebuild_cache.dir

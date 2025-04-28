@@ -7,8 +7,8 @@ struct Color {
 	int green;
 	int blue;
 
-	Color(int redd, int greenn, int bluee) : red(redd), green(greenn), blue(bluee) {}
 	Color() : red(0), green(0), blue(0) {}
+	Color(int redd, int greenn, int bluee) : red(redd), green(greenn), blue(bluee) {}
 };
 
 std::vector<std::vector<Color>> sequentialBlur(std::vector<std::vector<Color>>& imag) {
@@ -17,14 +17,15 @@ std::vector<std::vector<Color>> sequentialBlur(std::vector<std::vector<Color>>& 
 	int col = imag[0].size();
 	std::vector<std::vector<Color>> new_imag(row, std::vector<Color>(col));
 	int step = 5;
+	int half = step / 2;
 	for (int i = 0; i < row;i++) {
 		for (int j = 0; j < col;j++) {
 			long int sum_red = 0;
 			long int sum_green = 0;
 			long int sum_blue = 0;
 			int count = 0;
-			for (int minus_i = -step / 2; minus_i <= step / 2;minus_i++) {
-				for (int minus_j = -step / 2; minus_j <= step / 2;minus_j++) {
+			for (int minus_i = -half; minus_i <= half; minus_i++) {
+				for (int minus_j = -half; minus_j <= half; minus_j++) {
 					int new_row = i + minus_i;
 					int new_col = j + minus_j;
 						if (new_row >= 0 && new_col >= 0 && new_row < row && new_col < col) {

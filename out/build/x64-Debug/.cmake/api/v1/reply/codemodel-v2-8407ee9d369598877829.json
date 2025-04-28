@@ -30,7 +30,8 @@
 					"source" : "src",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -46,7 +47,8 @@
 					"name" : "multithreading",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -57,6 +59,13 @@
 					"id" : "seqblur::@145eef247bfb46b6828c",
 					"jsonFile" : "target-seqblur-Debug-ee26b02d8a66ead9b427.json",
 					"name" : "seqblur",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "threads::@145eef247bfb46b6828c",
+					"jsonFile" : "target-threads-Debug-da818638d52fad364fa5.json",
+					"name" : "threads",
 					"projectIndex" : 0
 				}
 			]
