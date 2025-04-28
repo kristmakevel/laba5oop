@@ -142,6 +142,43 @@ build C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\threads.exe: CX
   TARGET_IMPLIB = src\threads.lib
   TARGET_PDB = C:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\threads.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target atomut
+
+
+#############################################
+# Order-only phony target for atomut
+
+build cmake_object_order_depends_target_atomut: phony || .
+
+build src\CMakeFiles\atomut.dir\atomic_mutex.cpp.obj: CXX_COMPILER__atomut_unscanned_Debug C$:\Users\macka\source\repos\kristmakevel\laba5oop\src\atomic_mutex.cpp || cmake_object_order_depends_target_atomut
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  INCLUDES = -IC:\Users\macka\source\repos\kristmakevel\laba5oop\src
+  OBJECT_DIR = src\CMakeFiles\atomut.dir
+  OBJECT_FILE_DIR = src\CMakeFiles\atomut.dir
+  TARGET_COMPILE_PDB = src\CMakeFiles\atomut.dir\
+  TARGET_PDB = C:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target atomut
+
+
+#############################################
+# Link the executable C:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.exe
+
+build C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.exe: CXX_EXECUTABLE_LINKER__atomut_Debug src\CMakeFiles\atomut.dir\atomic_mutex.cpp.obj
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -MDd
+  LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
+  LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  OBJECT_DIR = src\CMakeFiles\atomut.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = src\CMakeFiles\atomut.dir\
+  TARGET_FILE = C:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.exe
+  TARGET_IMPLIB = src\atomut.lib
+  TARGET_PDB = C:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -168,6 +205,10 @@ build src\rebuild_cache: phony src\CMakeFiles\rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build atomut: phony C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.exe
+
+build atomut.exe: phony C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.exe
+
 build seqblur: phony C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\seqblur.exe
 
 build seqblur.exe: phony C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\seqblur.exe
@@ -191,7 +232,7 @@ build all: phony src\all
 #############################################
 # Folder: C:/Users/macka/source/repos/kristmakevel/laba5oop/out/build/x64-Debug/src
 
-build src\all: phony C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\seqblur.exe C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\threads.exe
+build src\all: phony C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\seqblur.exe C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\threads.exe C$:\Users\macka\source\repos\kristmakevel\laba5oop\bin.dbg\atomut.exe
 
 # =============================================================================
 # Built-in targets

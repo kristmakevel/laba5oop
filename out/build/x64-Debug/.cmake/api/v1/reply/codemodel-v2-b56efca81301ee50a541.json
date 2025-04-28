@@ -31,7 +31,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -48,12 +49,20 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 1,
+					"id" : "atomut::@145eef247bfb46b6828c",
+					"jsonFile" : "target-atomut-Debug-2b4149ae8150f2c56765.json",
+					"name" : "atomut",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "seqblur::@145eef247bfb46b6828c",

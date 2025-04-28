@@ -51,7 +51,7 @@ std::vector<std::vector<Color>> parallellBlurThreads(const std::vector<std::vect
     int row = imag.size();
     int col = imag[0].size();
     std::vector<std::vector<Color>> new_imag(row, std::vector<Color>(col));
-    std::vector<std::thread> threads;
+    std::vector<std::thread> c_threads;
     int rows_thread = (row + threads_count - 1) / threads_count;
     for (int i = 0; i < threads_count; i++) {
         int first_row = i * rows_thread;
@@ -62,9 +62,9 @@ std::vector<std::vector<Color>> parallellBlurThreads(const std::vector<std::vect
         else {
             last_row = first_row + rows_thread;
         }
-        threads.push_back(std::thread(one_Blur, std::cref(imag), std::ref(new_imag), first_row, last_row));
+        c_threads.push_back(std::thread(one_Blur, std::cref(imag), std::ref(new_imag), first_row, last_row));
     }
-    for (auto& thr : threads) {
+    for (auto& thr : c_threads) {
         thr.join();
     }
     return new_imag;
@@ -93,6 +93,12 @@ int main() {
             large_image[i][j] = Color(255, 255, 255);
         }
     }
+    auto start_large_im = std::chrono::high_resolution_clock::now();
+    auto blur_large = parallellBlurThreads(large_image, 1);
+    auto end_large_im = std::chrono::high_resolution_clock::now();
+    std::chrono::duration <double> larg_im = end_large_im - start_large_im;
+    std::cout << "large image time: " << larg_im.count() << "\n";
+
     auto starting = std::chrono::high_resolution_clock::now();
     auto bluring = parallellBlurThreads(large_image, 5);
     auto ending = std::chrono::high_resolution_clock::now();

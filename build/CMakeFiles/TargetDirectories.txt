@@ -1,0 +1,5 @@
+C:/Users/macka/source/repos/kristmakevel/laba5oop/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/macka/source/repos/kristmakevel/laba5oop/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/macka/source/repos/kristmakevel/laba5oop/build/src/CMakeFiles/seqblur.dir
+C:/Users/macka/source/repos/kristmakevel/laba5oop/build/src/CMakeFiles/threads.dir
+C:/Users/macka/source/repos/kristmakevel/laba5oop/build/src/CMakeFiles/atomut.dir
